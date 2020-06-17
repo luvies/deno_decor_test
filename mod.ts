@@ -2,9 +2,9 @@ import { getSuiteTestConfig, getSuiteTests } from "./meta.ts";
 
 export interface ISuite {
   suiteSetup?(): Promise<void> | void;
-  suiteTearDown?(): Promise<void> | void;
+  suiteTeardown?(): Promise<void> | void;
   testSetup?(): Promise<void> | void;
-  testTearDown?(): Promise<void> | void;
+  testTeardown?(): Promise<void> | void;
 }
 
 export function Test(desc?: string) {
@@ -53,10 +53,10 @@ export function TestSuite(name?: string) {
     };
 
     const teardown = async () => {
-      await suite.testTearDown?.();
+      await suite.testTeardown?.();
 
       if (setups === suiteTests.size) {
-        await suite.suiteTearDown?.();
+        await suite.suiteTeardown?.();
       }
     };
 

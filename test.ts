@@ -18,11 +18,11 @@ export class Suite implements ISuite {
     this.setups++;
   }
 
-  testTearDown() {
+  testTeardown() {
     this.teardowns++;
   }
 
-  async suiteTearDown() {
+  async suiteTeardown() {
     await new Promise((resolve) => setTimeout(resolve, 500));
     console.log(
       "teardown",
