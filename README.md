@@ -1,8 +1,8 @@
 # Deno Decorator Test Framework
 
-This module allows tests to be defined using a class instead of a pure function call. This allows tests to be written together logically, and allows some extra features, such as setup and teardown.
+This module allows tests to be defined using a class instead of a pure function call, allowing tests to be written together logically, and enables some extra features, such as setup and teardown.
 
-This test framework is based entire on Deno's built-in test features, and as such, will work directly and without issue, only requiring a custom tsconfig to allow decorators..
+This test framework is based entirely on Deno's built-in test features, and as such, will work directly and without issue, only requiring a custom tsconfig to allow decorators.
 
 An example test suite could look like the following:
 
