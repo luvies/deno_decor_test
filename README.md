@@ -2,6 +2,8 @@
 
 This module allows tests to be defined using a class instead of a pure function call. This allows tests to be written together logically, and allows some extra features, such as setup and teardown.
 
+This test framework is based entire on Deno's built-in test features, and as such, will work directly and without issue, only requiring a custom tsconfig to allow decorators..
+
 An example test suite could look like the following:
 
 ```ts
@@ -34,3 +36,15 @@ class ExampleTest {
 ## API
 
 See the [API docs](https://doc.deno.land/https/raw.githubusercontent.com/luvies/deno_decor_test/master/mod.ts) for a complete overview of what's available.
+
+## TSConfig
+
+To enable decorators, you will need a tsconfig.json with the following options set:
+
+```json
+{
+  "compilerOptions": {
+    "experimentalDecorators": true
+  }
+}
+```
